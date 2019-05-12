@@ -12,11 +12,10 @@ module fullBody() {
 	difference() {
 		rawBody();
 		// main hole
-		//translate([42.5,12.5,0]) cylinder(d=15, h=3, $fn=fn);	
-        union() {
-        translate([42.5,12.5,1.6]) cylinder(d1=14,d2=15, h=0.4, $fn=fn);
-        translate([42.5,12.5,0.4]) cylinder(d=14, h=1.2, $fn=fn);
-        translate([42.5,12.5,0]) cylinder(d1=15, d2=14, h=0.4, $fn=fn);
+		union() {
+            translate([42.5,12.5,1.6]) cylinder(d1=14,d2=15, h=0.4, $fn=fn);
+            translate([42.5,12.5,0.4]) cylinder(d=14, h=1.2, $fn=fn);
+            translate([42.5,12.5,0]) cylinder(d1=15, d2=14, h=0.4, $fn=fn);
         }
 		// rounded edge
 		translate([-5,20,0]) difference() {
@@ -25,8 +24,7 @@ module fullBody() {
 		}
 		// box opener
         translate([]) rotate([11,-11,0]) cube([20,20,2]);
-		//translate([]) rotate([10,-10,0]) translate([-5,0,0])cube([20,10,5]);
-		
+				
 		//wire stripper and bender
 		translate([30,25,0]) cylinder(d=2, h=3, $fn=fn);
 		// belt cutter
@@ -55,18 +53,12 @@ module fullBody() {
 	
 module test()
 {
-    //translate([]) rotate([11,-11,0]) cube([20,20,2]);
-    union() {
-        translate([42.5,12.5,1.6]) cylinder(d1=14,d2=15, h=0.4, $fn=fn);
-    translate([42.5,12.5,0.4]) cylinder(d=14, h=1.2, $fn=fn);
-    translate([42.5,12.5,0]) cylinder(d1=15, d2=14, h=0.4, $fn=fn);
-    }
-}
-
-
+        }
+//test();
+        
 fullBody();
 
-//test();
+
 		
 
 
